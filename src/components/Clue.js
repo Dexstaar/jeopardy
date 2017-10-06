@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Clue extends Component {
+export class Clue extends Component {
     constructor() {
         super();
 
