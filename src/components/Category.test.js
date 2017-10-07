@@ -1,18 +1,16 @@
 import React from 'react';
-import { configure, mount } from 'enzyme';
+import { configure, mount, shallow } from 'enzyme';
 import { Category } from './Category';
-import Adapter from 'enzyme-adapter-react-16';
 import { categories, clues } from '../data/fixtures';
 import { fakeServer } from 'sinon';
 
-configure({ adapter: new Adapter() });
 const props = { category: categories[0] };
 
 describe('Category', () => {
     let server;
 
     beforeEach(() => {
-        const server = fakeServer.create();
+        server = fakeServer.create();
 
         server.respondWith(
             'GET',
@@ -40,4 +38,6 @@ describe('Category', () => {
             console.log(category.debug());
         });
     });
+
+    
 });

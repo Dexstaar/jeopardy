@@ -1,11 +1,8 @@
 import React from 'react';
 import { configure, shallow } from 'enzyme';
 import { Clue } from './Clue';
-import Adapter from 'enzyme-adapter-react-16';
-
 import { clue } from '../data/fixtures';
 
-configure({ adapter: new Adapter() });
 const props = { clue };
 
 describe('Clue', () => {
